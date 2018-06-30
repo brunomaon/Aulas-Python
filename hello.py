@@ -2,8 +2,17 @@
 # bem vindo
 nome = input("Nome do aluno:  ")
 nome = nome.title()
-nota1 = int(input("Nota da primeira prova: "))
-nota2 = int(input("Nota da segunda prova: "))
-media = ((nota1 + nota2)/2)
-print("O aluno {0} tem a media {1}".format(nome, media))
 
+soma = 0
+for x in range(3):
+    nota = int(input("Digite nota {}: ".format(x+1)))
+    soma += nota
+
+media = soma/3
+
+if  media >= 7:
+    result = 'aprovado'
+else:
+    result = 'reprovado'
+
+print("O aluno {0} foi {1} com media {2}".format(nome.title(), result, media))
